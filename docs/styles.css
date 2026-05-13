@@ -21,7 +21,6 @@
   --display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --mono:    "Space Mono", "SFMono-Regular", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
 
-  --frame: clamp(10px, 1.6vw, 22px);
   --gutter: clamp(20px, 5.2vw, 76px);
   --maxw: 1280px;
 
@@ -77,33 +76,6 @@ ul { list-style: none; padding: 0; }
 :focus-visible {
   outline: 2px solid var(--spot);
   outline-offset: 3px;
-}
-
-/* ---------- registration frame + crop marks ---------- */
-.frame {
-  position: fixed;
-  inset: var(--frame);
-  border: 1px solid var(--ink);
-  pointer-events: none;
-  z-index: 90;
-  transition: opacity 0.55s var(--ease);
-}
-/* the matte border belongs only to the top of the page; it melts away on scroll
-   so it never crosses content rules */
-html.is-scrolled .frame { opacity: 0; }
-.frame i {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  border: 0 solid var(--ink);
-}
-.frame i:nth-child(1) { top: -1px;    left: -1px;    border-top-width: 1px;    border-left-width: 1px;  transform: translate(-7px, -7px); }
-.frame i:nth-child(2) { top: -1px;    right: -1px;   border-top-width: 1px;    border-right-width: 1px; transform: translate(7px, -7px); }
-.frame i:nth-child(3) { bottom: -1px; left: -1px;    border-bottom-width: 1px; border-left-width: 1px;  transform: translate(-7px, 7px); }
-.frame i:nth-child(4) { bottom: -1px; right: -1px;   border-bottom-width: 1px; border-right-width: 1px; transform: translate(7px, 7px); }
-
-@media (max-width: 640px) {
-  .frame { display: none; }
 }
 
 /* ---------- shared layout ---------- */
@@ -176,17 +148,17 @@ em, .it { font-style: italic; }
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: calc(var(--frame) + 12px) calc(var(--gutter) - 4px) 14px;
+  padding: clamp(22px, 2.4vw, 32px) calc(var(--gutter) - 4px) 16px;
   font-family: var(--mono);
   text-transform: uppercase;
   transition: background-color 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
 }
 html.is-scrolled .site-header {
-  background: rgba(244, 239, 227, 0.86);
+  background: rgba(244, 239, 227, 0.88);
   backdrop-filter: blur(10px) saturate(1.1);
   box-shadow: 0 1px 0 var(--line);
-  padding-top: calc(var(--frame) + 9px);
-  padding-bottom: 11px;
+  padding-top: clamp(18px, 2vw, 26px);
+  padding-bottom: 12px;
 }
 
 .brand {

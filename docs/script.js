@@ -4,7 +4,7 @@
 (() => {
   "use strict";
 
-  /* ---- scroll state: collapses the header, melts the matte border ---- */
+  /* ---- collapse the header once the page is scrolled ---- */
   const setScrolled = () =>
     document.documentElement.classList.toggle("is-scrolled", window.scrollY > 24);
   setScrolled();
