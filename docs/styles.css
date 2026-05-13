@@ -162,8 +162,8 @@ html.is-scrolled .site-header {
 }
 
 .brand {
-  font-size: 0.74rem;
-  letter-spacing: 0.24em;
+  font-size: 0.86rem;
+  letter-spacing: 0.18em;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -204,7 +204,7 @@ html.is-scrolled .site-header {
 }
 @media (max-width: 480px) {
   .site-header { padding-inline: 14px; gap: 10px; }
-  .brand { font-size: 0.58rem; letter-spacing: 0.11em; gap: 0.5em; }
+  .brand { font-size: 0.66rem; letter-spacing: 0.1em; }
   .site-nav { font-size: 0.55rem; gap: 3px 9px; letter-spacing: 0.1em; max-width: 58vw; }
 }
 
@@ -249,7 +249,7 @@ html.is-scrolled .site-header {
   font-weight: 600;
   font-variation-settings: "WONK" 1, "SOFT" 50;
   font-size: clamp(3.4rem, 12.5vw, 10.5rem);
-  line-height: 0.84;
+  line-height: 1;
   letter-spacing: -0.02em;
   margin: 0;
 }
@@ -259,7 +259,7 @@ html.is-scrolled .site-header {
   font-style: italic;
   font-weight: 400;
   font-variation-settings: "WONK" 1, "SOFT" 24;
-  margin-left: clamp(0.04em, 1.6vw, 0.42em);
+  margin-left: clamp(0.12em, 1.8vw, 0.52em);
   color: var(--spot);
 }
 
