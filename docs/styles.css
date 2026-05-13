@@ -538,9 +538,6 @@ html.is-scrolled .site-header {
   box-shadow: 8px 10px 0 var(--ink);
 }
 .file-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
   padding: 0.85em 1em;
   border-bottom: 1px solid var(--line);
   background: var(--paper-2);
@@ -551,9 +548,7 @@ html.is-scrolled .site-header {
   color: var(--ink-2);
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
-.file-head .no { color: var(--spot); }
 .file:hover .file-head { background: var(--spot); color: var(--paper); }
-.file:hover .file-head .no { color: var(--paper); }
 .file-body { padding: clamp(18px, 2.2vw, 26px) clamp(16px, 2vw, 24px) clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; flex: 1; }
 .file h3 {
   font-family: var(--display);
