@@ -314,20 +314,17 @@ html.is-scrolled .site-header {
   box-shadow: 12px 12px 0 0 var(--paper), 12px 12px 0 1px var(--line);
 }
 .hero-portrait img {
+  display: block;
   width: 100%;
-  height: clamp(248px, 31vw, 348px);
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 16%;
-  filter: grayscale(1) contrast(1.07) brightness(1.02);
-  transition: filter 0.7s var(--ease);
+  object-position: center 14%;
 }
-.hero-portrait:hover img { filter: grayscale(0) contrast(1.02); }
 @media (max-width: 900px) {
   .hero { min-height: auto; padding-top: clamp(88px, 13vh, 128px); padding-bottom: clamp(40px, 7vh, 64px); }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: clamp(28px, 5vw, 40px); }
   .hero-text { width: 100%; }
   .hero-portrait { flex: none; width: min(330px, 78%); }
-  .hero-portrait img { height: clamp(280px, 78vw, 380px); }
   .hero h1 { font-size: clamp(3.4rem, 13.5vw, 8.2rem); }
 }
 
