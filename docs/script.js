@@ -1,4 +1,4 @@
-/* DOSSIER — Benjamin Hadad
+/* DOSSIER / Benjamin Hadad
    Header state · seamless ticker · scroll reveals · nav scroll-spy */
 
 (() => {

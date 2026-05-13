@@ -1,5 +1,5 @@
 /* =====================================================================
-   DOSSIER  —  Benjamin Hadad
+   DOSSIER  /  Benjamin Hadad
    A warm-paper technical broadsheet: Fraunces display + Space Mono data,
    hairline ledgers, a registration frame, a competitive-ledger scoreboard.
    ===================================================================== */
@@ -121,7 +121,7 @@ ul { list-style: none; padding: 0; }
   text-transform: uppercase;
 }
 
-/* section marker:  § 0X — TITLE */
+/* section marker:  § 0X / TITLE */
 .marker {
   display: flex;
   align-items: baseline;
@@ -293,8 +293,6 @@ em, .it { font-style: italic; }
 }
 .hero-meta .k { color: var(--spot); }
 .hero-meta .d { color: var(--ink-3); }
-.hero-meta span:last-child { margin-left: auto; color: var(--ink-3); }
-@media (max-width: 560px) { .hero-meta span:last-child { display: none; } }
 
 .hero h1 {
   font-family: var(--display);
@@ -356,7 +354,7 @@ em, .it { font-style: italic; }
 .stamp.is-primary::before { color: var(--paper); }
 .stamp.is-primary:hover, .stamp.is-primary:focus-visible { background: var(--spot-deep); border-color: var(--spot-deep); }
 
-/* portrait — dossier photo */
+/* portrait / dossier photo */
 .hero-portrait {
   position: relative;
   align-self: start;
@@ -594,7 +592,7 @@ em, .it { font-style: italic; }
   align-items: start;
 }
 .ledger-list li::before {
-  content: "—";
+  content: "→";
   color: var(--spot);
   font-family: var(--mono);
 }
@@ -667,7 +665,7 @@ em, .it { font-style: italic; }
   display: grid;
   grid-template-columns: 1.2em 1fr;
 }
-.file ul li::before { content: "—"; color: var(--spot); font-family: var(--mono); }
+.file ul li::before { content: "→"; color: var(--spot); font-family: var(--mono); }
 @media (max-width: 920px) { .files { grid-template-columns: 1fr; } .file:hover { box-shadow: 5px 6px 0 var(--ink); } }
 
 /* ---------- scoreboard (awards) ---------- */
