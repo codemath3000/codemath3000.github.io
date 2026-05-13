@@ -381,6 +381,7 @@ html.is-scrolled .site-header {
 .index .cell:first-child { border-left: 0; padding-left: 0; }
 .index .cell:last-child { padding-right: 0; }
 .index .fig {
+  display: block;
   font-family: var(--display);
   font-weight: 600;
   font-variation-settings: "WONK" 1, "SOFT" 40;
