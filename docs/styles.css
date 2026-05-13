@@ -1,7 +1,7 @@
 /* =====================================================================
-   DOSSIER  /  Benjamin Hadad
-   A warm-paper technical broadsheet: Fraunces display + Space Mono data,
-   hairline ledgers, a registration frame, a competitive-ledger scoreboard.
+   Benjamin Hadad  ·  personal site
+   Warm-paper editorial layout: Fraunces display + Space Mono data,
+   hairline rules, a registration frame, a competitive-ledger scoreboard.
    ===================================================================== */
 
 :root {
@@ -86,7 +86,11 @@ ul { list-style: none; padding: 0; }
   border: 1px solid var(--ink);
   pointer-events: none;
   z-index: 90;
+  transition: opacity 0.55s var(--ease);
 }
+/* the matte border belongs only to the top of the page; it melts away on scroll
+   so it never crosses content rules */
+html.is-scrolled .frame { opacity: 0; }
 .frame i {
   position: absolute;
   width: 13px;
@@ -121,7 +125,7 @@ ul { list-style: none; padding: 0; }
   text-transform: uppercase;
 }
 
-/* section marker:  § 0X / TITLE */
+/* section marker:  TITLE  ····  tail description */
 .marker {
   display: flex;
   align-items: baseline;
@@ -135,8 +139,7 @@ ul { list-style: none; padding: 0; }
   letter-spacing: 0.26em;
   text-transform: uppercase;
 }
-.marker .num { color: var(--spot); }
-.marker .ttl { color: var(--ink); }
+.marker .ttl { color: var(--ink); font-weight: 700; }
 .marker .tail {
   flex: 1;
   text-align: right;
@@ -178,40 +181,20 @@ em, .it { font-style: italic; }
   text-transform: uppercase;
   transition: background-color 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
 }
-.site-header.is-scrolled {
+html.is-scrolled .site-header {
   background: rgba(244, 239, 227, 0.86);
   backdrop-filter: blur(10px) saturate(1.1);
   box-shadow: 0 1px 0 var(--line);
   padding-top: calc(var(--frame) + 9px);
   padding-bottom: 11px;
 }
-.site-header::after {
-  content: "";
-  position: absolute;
-  left: var(--gutter); right: var(--gutter); bottom: 0;
-  height: 1px;
-  background: var(--line);
-  opacity: 0;
-  transition: opacity 0.4s var(--ease);
-}
-/* keep one hairline visible only when scrolled (shadow does it) */
 
 .brand {
-  display: flex;
-  align-items: baseline;
-  gap: 0.8em;
   font-size: 0.74rem;
   letter-spacing: 0.24em;
   font-weight: 700;
+  white-space: nowrap;
 }
-.brand .glyph { color: var(--spot); font-weight: 400; }
-.brand .sub {
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  color: var(--ink-3);
-  font-size: 0.66rem;
-}
-@media (max-width: 760px) { .brand .sub { display: none; } }
 
 .site-nav {
   display: flex;
@@ -354,7 +337,7 @@ em, .it { font-style: italic; }
 .stamp.is-primary::before { color: var(--paper); }
 .stamp.is-primary:hover, .stamp.is-primary:focus-visible { background: var(--spot-deep); border-color: var(--spot-deep); }
 
-/* portrait / dossier photo */
+/* portrait */
 .hero-portrait {
   position: relative;
   align-self: start;
@@ -387,19 +370,6 @@ em, .it { font-style: italic; }
   text-transform: uppercase;
   color: var(--ink-3);
 }
-.hero-portrait figcaption b { color: var(--spot); font-weight: 400; }
-.hero-portrait .tag {
-  position: absolute;
-  top: 14px; right: -10px;
-  padding: 4px 9px;
-  background: var(--spot);
-  color: var(--paper);
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  transform: rotate(3deg);
-}
 @media (max-width: 900px) {
   .hero { min-height: auto; padding-top: clamp(104px, 16vh, 150px); }
   .hero-grid { grid-template-columns: 1fr; align-items: start; row-gap: 30px; }
@@ -411,7 +381,7 @@ em, .it { font-style: italic; }
 /* ---------- ticker ---------- */
 .ticker {
   background: var(--ink);
-  color: var(--paper);
+  color: rgba(244, 239, 227, 0.82);
   border-block: 1px solid var(--ink);
   overflow: hidden;
   padding-block: 0.85em;
@@ -431,7 +401,7 @@ em, .it { font-style: italic; }
 .ticker:hover .track { animation-play-state: paused; }
 .ticker .item { padding-inline: 1.6em; }
 .ticker .item .sep { color: var(--spot); margin-left: 1.1em; }
-.ticker .item b { color: var(--spot); font-weight: 700; }
+.ticker .item b { color: var(--paper); font-weight: 700; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- index / by-the-numbers ---------- */

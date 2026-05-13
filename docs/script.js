@@ -1,16 +1,14 @@
-/* DOSSIER / Benjamin Hadad
-   Header state · seamless ticker · scroll reveals · nav scroll-spy */
+/* Benjamin Hadad · personal site
+   Scroll state · seamless ticker · scroll reveals · nav scroll-spy */
 
 (() => {
   "use strict";
 
-  /* ---- sticky header state ---- */
-  const header = document.querySelector("[data-header]");
-  if (header) {
-    const sync = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
-    sync();
-    window.addEventListener("scroll", sync, { passive: true });
-  }
+  /* ---- scroll state: collapses the header, melts the matte border ---- */
+  const setScrolled = () =>
+    document.documentElement.classList.toggle("is-scrolled", window.scrollY > 24);
+  setScrolled();
+  window.addEventListener("scroll", setScrolled, { passive: true });
 
   /* ---- ticker: duplicate the track for a seamless -50% loop ---- */
   const track = document.querySelector("[data-ticker]");
