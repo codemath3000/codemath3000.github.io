@@ -355,13 +355,12 @@ html.is-scrolled .site-header {
 }
 .ticker .track {
   display: inline-flex;
-  gap: 0;
-  animation: marquee 42s linear infinite;
+  align-items: baseline;
+  animation: marquee 46s linear infinite;
   will-change: transform;
 }
 .ticker:hover .track { animation-play-state: paused; }
-.ticker .item { padding-inline: 1.6em; }
-.ticker .item .sep { color: var(--spot); margin-left: 1.1em; }
+.ticker .item .sep { color: var(--spot); margin-inline: 1.75em; }
 .ticker .item b { color: var(--paper); font-weight: 700; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
@@ -385,9 +384,9 @@ html.is-scrolled .site-header {
   font-family: var(--display);
   font-weight: 600;
   font-variation-settings: "WONK" 1, "SOFT" 40;
-  font-size: clamp(2.1rem, 1.3rem + 2.4vw, 3.4rem);
-  line-height: 0.95;
-  letter-spacing: -0.018em;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1;
+  letter-spacing: -0.015em;
 }
 .index .cell:nth-child(1) .fig { color: var(--spot); }
 .index .lab {
