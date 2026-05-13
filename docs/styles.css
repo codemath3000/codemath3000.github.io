@@ -225,7 +225,7 @@ html.is-scrolled .site-header {
   margin-block: auto;
 }
 .hero-text { flex: 1 1 auto; min-width: 0; }
-.hero-portrait { flex: 0 0 clamp(196px, 25vw, 312px); }
+.hero-portrait { flex: none; width: clamp(196px, 25vw, 312px); }
 .hero-aside { padding-top: clamp(10px, 1.6vw, 22px); }
 
 .hero-meta {
@@ -316,7 +316,7 @@ html.is-scrolled .site-header {
 .hero-portrait img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: clamp(300px, 33vw, 376px);
   object-fit: cover;
   object-position: center 14%;
 }
@@ -325,6 +325,7 @@ html.is-scrolled .site-header {
   .hero-grid { flex-direction: column; align-items: flex-start; gap: clamp(28px, 5vw, 40px); }
   .hero-text { width: 100%; }
   .hero-portrait { flex: none; width: min(330px, 78%); }
+  .hero-portrait img { height: clamp(330px, 96vw, 410px); }
   .hero h1 { font-size: clamp(3.4rem, 13.5vw, 8.2rem); }
 }
 
