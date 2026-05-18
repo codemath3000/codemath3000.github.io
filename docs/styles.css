@@ -529,6 +529,7 @@ html.is-scrolled .site-header {
   flex-direction: column;
   border: 1px solid var(--line);
   background: var(--paper);
+  text-align: center;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .file:hover {
@@ -572,10 +573,9 @@ html.is-scrolled .site-header {
   color: var(--ink-2);
 }
 .file ul li {
-  display: grid;
-  grid-template-columns: 1.2em 1fr;
+  display: block;
+  text-wrap: balance;
 }
-.file ul li::before { content: "→"; color: var(--spot); font-family: var(--mono); }
 @media (max-width: 920px) { .files { grid-template-columns: 1fr; } .file:hover { box-shadow: 5px 6px 0 var(--ink); } }
 
 /* ---------- scoreboard (awards) ---------- */
